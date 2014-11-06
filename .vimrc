@@ -1,5 +1,10 @@
+" myke's setup for vim editor
+" 2014-11-07
+
+" nudist support... no, string numbering
 set nu
 
+"color schemes
 "colorscheme mk-1
 "colorscheme desert
 "colorscheme vi-clone
@@ -21,6 +26,7 @@ set termencoding=utf-8
 set fileencodings=utf-8,cp1251,koi8r,cp866
 set encoding=utf-8
 
+" mysqk supprt
 if has("autocmd")
     autocmd BufRead *.sql set filetype=mysql      
 endif
@@ -34,4 +40,11 @@ set undodir=~/.vim/undo
 set undolevels=1000
 set undoreload=10000
 set backupdir=~/.vim/backup
+
+" pathpogen install and setup
+filetype off
+call pathogen#helptags()
+"call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
+filetype plugin indent on
 
