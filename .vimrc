@@ -48,3 +48,8 @@ call pathogen#helptags()
 call pathogen#infect()
 filetype plugin indent on
 
+" Tab is Next window
+nnoremap <Tab> <C-W>w
+" Shift-Tab is Previous window
+nnoremap <S-Tab> <C-W>W
+
